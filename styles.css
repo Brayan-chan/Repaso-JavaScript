@@ -169,14 +169,12 @@ label.modelo {
 
 @media (max-width: 600px) {
     button {
-        font-size: 8px;
+        font-size: 7px;
         gap: 0px;
-        margin: 1px;
+        margin: 0px;
     }
 
     nav {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
         justify-content: space-between;
         padding: 0px;
     }
