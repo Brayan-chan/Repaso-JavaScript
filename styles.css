@@ -169,7 +169,8 @@ label.modelo {
 
 @media (max-width: 600px) {
     button {
-        font-size: 6px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 5px;
         gap: 0px;
         margin: 0px;
     }
