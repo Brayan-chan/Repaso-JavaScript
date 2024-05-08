@@ -170,18 +170,19 @@ label.modelo {
 @media (max-width: 600px) {
     button {
         font-size: 8px;
-        gap: 0.5px;
+        gap: 0px;
+        margin: 1px;
     }
 
     nav {
         justify-content: space-between;
-        padding: 2px;
+        padding: 0px;
     }
 
     .contenedor {
         margin-block: calc(80px);
         font-size: 20px;
-        margin-inline: calc(80px);
+        margin-inline: calc(60px);
     }
 
     .info {
