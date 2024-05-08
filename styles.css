@@ -172,6 +172,11 @@ label.modelo {
         font-size: 10px;
         gap: 2px;
     }
+
+    nav {
+        justify-content: space-between;
+    }
+
     .contenedor {
         margin-block: calc(20px);
         font-size: 20px;
