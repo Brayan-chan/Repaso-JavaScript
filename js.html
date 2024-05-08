@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="botones">
+        <nav>
+            <button class="html" onclick="location.href='index.html'">
+                HTML
+            </button>
+
+            <button class="next" onclick="location.href='js.html'">⏩️</button>
+        </nav>
+    </div>
+    <h1 class="gradient center">Calculadora</h1>
+    <div class="container">
+        <div class="titulo">
+            <label for="nombre" class="nombre">CASIO</label>
+            <label for="modelo" class="italic modelo">fx-250</label>
+        </div>
+        <div class="pantalla">
+            <input type="text" name="pantalla" id="pantalla" placeholder="000" readonly>
+        </div>
+        <div class="funciones">
+            <div id="modos">
+                <button id="clear" class="gradient">C</button>
+                <button id="borrar" class="gradient">⬅︎</button>
+                <button id="porcentaje" class="gradient">%</button>
+                <button id="division" class="gradient">÷</button>
+            </div>
+            <div id="numeros">
+                <button id="siete">7</button>
+                <button id="ocho">8</button>
+                <button id="nueve">9</button>
+                <button id="multiplicacion" class="gradient">×</button>
+            </div>
+            <div id="operadores">
+                <button id="cuatro">4</button>
+                <button id="cinco">5</button>
+                <button id="seis">6</button>
+                <button id="restar" class="gradient">−</button>
+            </div>
+            <div id="resultantes">
+                <button id="uno">1</button>
+                <button id="dos">2</button>
+                <button id="tres">3</button>
+                <button id="sumar" class="gradient">+</button>
+            </div>
+            <div id="igual">
+                <button id="dosCeros">00</button>
+                <button id="cero">0</button>
+                <button id="punto">.</button>
+                <button id="igualar" class="gradient">=</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="calculadora.js"></script>
+
+</html>

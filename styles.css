@@ -1,0 +1,198 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.p5 {
+    padding: 5px;
+}
+
+.p {
+    background: linear-gradient(90deg, #b300ff 0%, #02b3ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 15px;
+    gap: 50px;
+    margin-inline:calc(10px);
+    border-radius: 20px;
+    margin-block: 2px;
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.next {
+    cursor: pointer;
+}
+
+.doctype:hover,
+.language:hover,
+.head:hover,
+.metadatos:hover,
+.body:hover,
+.close:hover {
+    transform: scale(0.90);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: calc(30% - 200px);
+    font-size: 30px;
+    padding: 10px;
+    margin-inline: calc(80px);
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: calc(30% - 200px);
+    font-size: 30px;
+    border: 2px solid white;
+    padding: 60px;
+    margin-inline: calc(130px);
+    border-radius: 20px;
+}
+
+.gradient {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos de la calculadora */
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    margin-block: 60px;
+    margin-inline: 120px;
+}
+
+.titulo {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #00C9FF;
+}
+
+label {
+    background: transparent;
+}
+
+.italic {
+    font-family: italic;
+}
+
+.nombre {
+    font-size: 20px;
+}
+
+label.modelo {
+    font-size: 20px;
+}
+
+.pantalla {
+    padding: 40px;
+    border: 10px solid white;
+}
+
+#pantalla {
+    font-size: 20px;
+    border: none;
+    width: 100%;    
+}
+
+.funciones {
+    border: 10px solid white;
+}
+
+#modos,
+#numeros,
+#operadores,
+#resultantes,
+#igual {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+    padding: 0;
+}
+
+#modos button,
+#numeros button,
+#operadores button,
+#resultantes button,
+#igual button {
+    padding: 20px;
+    border: 4px solid white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+    .contenedor {
+        margin-inline: calc(200px);
+    }
+}
+
+@media (min-width: 980px) {
+    .contenedor {
+        margin-inline: calc(280px);
+        margin-block: calc(30px);
+    }
+
+    nav {
+        margin-inline: calc(160px);
+    }
+}
+
+@media (max-width: 600px) {
+    button {
+        font-size: 10px;
+        gap: 2px;
+    }
+    .contenedor {
+        margin-block: calc(20px);
+        font-size: 20px;
+    }
+
+    .info {
+        margin-block: calc(20px);
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 645px) {
+    .info {
+        margin-block: calc(10px);
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 645px) {
+    .info {
+        margin-block: calc(10px);
+        font-size: 25px;
+    }
+}

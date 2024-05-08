@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repasos HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="botones">
+        <nav>
+            <button class="doctype">
+                DOCTYPE
+            </button>
+
+            <button class="language">
+                Language
+            </button>
+
+            <button class="head">
+                Head
+            </button>
+
+            <button class="metadatos">
+                Metadatos
+            </button>
+
+            <button class="body">
+                Body
+            </button>
+
+            <button class="close">
+                Close html
+            </button>
+
+            <button class="next" onclick="location.href='js.html'">⏩️</button>
+        </nav>
+    </div>
+    <div class="info"></div>
+    <div class="contenedor">
+        <ol>
+            <p class="p5 p">Estructura Básica</p>
+            <li onclick="infoDoctype()">DOCTYPE</li>
+            <li onclick="infoLanguage()">html Lenguaje</li>
+            <li onclick="infoHead()">head</li>
+            <li onclick="infoMeta()">Metadatos
+                <ul>UTF-8</ul>
+                <ul>viewport</ul>
+                <ul>title</ul>
+                <ul>imports</ul>
+            </li>
+            <li onclick="infoBody()">Body</li>
+            <li onclick="infoClose()">Close html</li>
+        </ol>
+    </div>
+</body>
+
+<script src="scripts.js"></script>
+
+</html>
