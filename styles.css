@@ -170,12 +170,12 @@ label.modelo {
 @media (max-width: 600px) {
     button {
         font-size: 8px;
-        gap: 1px;
+        gap: 0.5px;
     }
 
     nav {
         justify-content: space-between;
-        padding: 5px;
+        padding: 2px;
     }
 
     .contenedor {
