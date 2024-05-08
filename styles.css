@@ -169,8 +169,8 @@ label.modelo {
 
 @media (max-width: 600px) {
     button {
-        font-size: 10px;
-        gap: 2px;
+        font-size: 8px;
+        gap: 1px;
     }
 
     nav {
@@ -178,7 +178,7 @@ label.modelo {
     }
 
     .contenedor {
-        margin-block: calc(20px);
+        margin-block: calc(80px);
         font-size: 20px;
     }
 
