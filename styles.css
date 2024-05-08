@@ -175,11 +175,13 @@ label.modelo {
 
     nav {
         justify-content: space-between;
+        padding: 5px;
     }
 
     .contenedor {
         margin-block: calc(80px);
         font-size: 20px;
+        margin-inline: calc(80px);
     }
 
     .info {
