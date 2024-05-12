@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access</title>
+    <style>
+        /* Estilos para la tabla */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid white; /* Bordes blancos */
+            background-color: black; /* Fondo negro */
+            color: white; /* Texto blanco */
+        }
+
+        th, td {
+            border: 1px solid white; /* Bordes blancos */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+        }
+
+        /* Estilos adicionales */
+        .gradient {
+            background: linear-gradient(to right, #ff0000, #00ff00); /* Gradient de ejemplo */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="gradient center">Accediste</h1>
+
+    <!-- Formulario para ingresar datos del producto -->
+    <div class="form-container">
+        <h2>Registrar Producto</h2>
+        <form id="product-form">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="price">Precio:</label>
+            <input type="number" id="price" name="price" required>
+            <label for="type">Tipo:</label>
+            <select id="type" name="type">
+                <option value="luces">Luces</option>
+                <option value="computadores">Computadores</option>
+                <option value="celulares">Celulares</option>
+                <option value="impresoras">Impresoras</option>
+                <option value="teclados">Teclados</option>
+                <option value="monitores">Monitores</option>
+                <option value="mauses">Máuses</option>
+            </select>
+            <label for="registration-date">Fecha de Registro:</label>
+            <input type="date" id="registration-date" name="registration-date" required>
+            <label for="stock">Stock Disponible:</label>
+            <input type="checkbox" id="stock" name="stock">
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <!-- Tabla para mostrar los datos de los productos -->
+    <div class="table-container">
+        <h2>Lista de Productos</h2>
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Tipo</th>
+                    <th>Fecha de Registro</th>
+                    <th>Stock Disponible</th>
+                </tr>
+            </thead>
+            <tbody id="product-table-body">
+                <!-- Los datos de los productos se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Cargar los datos almacenados en el almacenamiento local al cargar la página
+        window.onload = function() {
+            var products = JSON.parse(localStorage.getItem('products')); // la variable products es un arreglo de objetos que se obtiene del localStorage
+            if (products) {
+                var tableBody = document.getElementById('product-table-body'); // la variable tableBody es un elemento de la tabla que contiene los productos
+                products.forEach(function(product) {  // el forEach se utiliza para iterar sobre los objetos de la variable products
+                    addProductToTable(product, tableBody); // la variable product es un objeto que se obtiene del localStorage y la variable tableBody es un elemento de la tabla que contiene los productos
+                });
+            }
+        };
+
+        document.getElementById('product-form').addEventListener('submit', function(event) { // el evento submit se activa cuando el usuario envía el formulario
+            event.preventDefault(); // evita que la página se recargue al enviar el formulario
+
+            // Función para agregar un nuevo producto a la tabla
+
+            // Obtener los valores del formulario
+            var name = document.getElementById('name').value; // la variable name es el valor del input con id name
+            var price = document.getElementById('price').value; // la variable price es el valor del input con id price
+            var type = document.getElementById('type').value; // la variable type es el valor del select con id type
+            var registrationDate = document.getElementById('registration-date').value; // la variable registrationDate es el valor del input con id registration-date
+            var stock = document.getElementById('stock').checked; // la variable stock es el valor del checkbox con id stock
+
+            // Crear un objeto con los datos del producto
+            var product = {
+                name: name, // la variable name es el valor del input con id name
+                price: price, // la variable price es el valor del input con id price
+                type: type, // la variable type es el valor del select con id type
+                registrationDate: registrationDate, // la variable registrationDate es el valor del input con id registration-date
+                stock: stock // la variable stock es el valor del checkbox con id stock
+            };
+
+            // Obtener los productos almacenados actualmente
+            var products = JSON.parse(localStorage.getItem('products')) || [];
+
+            // Agregar el nuevo producto a la lista de productos
+            products.push(product);
+
+            // Guardar la lista de productos en el almacenamiento local
+            localStorage.setItem('products', JSON.stringify(products));
+
+            // Agregar el producto a la tabla
+            addProductToTable(product, document.getElementById('product-table-body'));
+
+            // Limpiar el formulario después de agregar el producto
+            document.getElementById('product-form').reset();
+        });
+
+        // Función para agregar un producto a la tabla
+        function addProductToTable(product, tableBody) { // la variable product es un objeto que se obtiene del localStorage y la variable tableBody es un elemento de la tabla que contiene los productos
+            var newRow = tableBody.insertRow(); // la variable newRow es un elemento de la tabla que contiene los productos
+            var cellName = newRow.insertCell(0); // la variable cellName es un elemento de la tabla que contiene los productos
+            var cellPrice = newRow.insertCell(1); // la variable cellPrice es un elemento de la tabla que contiene los productos
+            var cellType = newRow.insertCell(2); // la variable cellType es un elemento de la tabla que contiene los productos
+            var cellRegistrationDate = newRow.insertCell(3); // la variable cellRegistrationDate es un elemento de la tabla que contiene los productos
+            var cellStock = newRow.insertCell(4); // la variable cellStock es un elemento de la tabla que contiene los productos
+
+            // Asignar los valores a las celdas de la nueva fila
+            cellName.textContent = product.name; // la variable name es el valor del input con id name
+            cellPrice.textContent = product.price; // la variable price es el valor del input con id price
+            cellType.textContent = product.type; // la variable type es el valor del select con id type
+            cellRegistrationDate.textContent = product.registrationDate; // la variable registrationDate es el valor del input con id registration-date
+            cellStock.textContent = product.stock ? 'Sí' : 'No'; // la variable stock es el valor del checkbox con id stock
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="gradient center">Forms</h1>
+    <div class="login">
+        <div class="encabezado">
+            <label>Todas las opciones con <span class="text-danger">*</span> son obligatorios</label>
+        </div>
+            <form id="form">
+                <label for="nombre" class="label">Nombre <span class="text-danger">*</span></label><br>
+                <input type="text" name="" class="form" id="nombre" placeholder="Example" required>
+                <label for="nombre" class="label">Correo <span class="text-danger">*</span></label><br>
+                <input type="email" name="" class="form" id="correo" placeholder="Example@gmail.com" required>
+                <label for="nombre" class="label">Contraseña <span class="text-danger">*</span></label><br>
+                <input type="password" name="" class="form" id="password" placeholder="*******" required>
+
+                <button type="submit" id="submit">Enviar</button>
+            </form>
+    </div>
+    <div id="datos">
+        <p class="text-danger">Datos guardados</p><br>
+        <label >Nombre:</label>
+        <input type="text" id="resName" readonly><br><br>
+        <label >Correo:</label>
+        <input type="text" id="resCorreo" readonly><br><br>
+        <label >Password:</label>
+        <input type="text" id="resPassword" readonly>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>

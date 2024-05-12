@@ -46,6 +46,21 @@ button {
     display: none;
 }
 
+.next3 {
+    display: block;
+    margin: 0 auto;
+    margin-block: 20px;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.next3:hover {
+    transform: scale(0.90);
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .doctype:hover,
 .language:hover,
@@ -153,6 +168,76 @@ label.modelo {
     border: 4px solid white;
     font-size: 20px;
     cursor: pointer;
+}
+
+/* Estilos del login */
+.login {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 5px solid white;
+    margin-block: 60px;
+    margin-inline: 120px;
+    border-radius: 10px;
+}
+
+.text-danger {
+    color: red;
+}
+
+.encabezado {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.label {
+    padding: 10px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    padding: 10px; 
+    width: 80%;
+}
+
+input.form {
+    margin: auto;
+    margin-block: 10px;
+}
+
+#submit {
+    margin-block: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-block: 40px;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#submit:hover {
+    transform: scale(0.90);
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#datos {
+    padding: 40px;
+    margin-inline: 60px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    border: 2px solid white;
 }
 
 @media (min-width: 900px) {

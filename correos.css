@@ -1,0 +1,188 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.text-danger {
+    background: linear-gradient(90deg, #ff0000 100%, #ff0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.s-20 {
+    font-size: 20px;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.m-5 {
+    margin: 5px;
+}
+
+.m-10 {
+    margin: 10px;
+}
+
+.mbl-5 {
+    margin-block: 5px;
+}
+
+.mbl-10 {
+    margin-block: 10px;
+}
+
+.gradient-primary {
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-secondary {
+    background: linear-gradient(90deg, #b300ff 0%, #02b3ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} 
+
+#sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+#sidebar button {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#sidebar button:hover {
+    transform: scale(0.90);
+}
+
+.container {
+    display: none;
+    padding: 20px;
+    border: 2px solid white;
+    margin: 50px;
+    border-radius: 10px;
+}
+
+.create-mail button{
+    display: block;
+    border: 2px solid white;
+    border-radius: 20%;
+    padding: 20px;
+    margin: auto;
+    font-size: 20px;
+    background: transparent;
+    cursor: pointer;
+} 
+
+label {
+    font-size: 25px;
+}
+
+input {
+    width: 220px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+input#destinatario {
+    width: 195px;
+}
+
+input#asunto {
+    width: 258px;
+}
+
+#cuerpo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.acciones {
+    display: flex;
+    flex-direction: row;
+}
+
+.acciones button {
+    margin: auto;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (min-width: 650px) {
+    input {
+        width: 60%;
+    }
+
+    input#destinatario {
+        width: 55%;
+    }
+}
+
+@media (min-width: 700px) {
+    input {
+        width: 60%;
+    }
+
+    input#destinatario {
+        width: 55%;
+    }
+}
+
+@media (min-width: 740px) {
+    .container {
+        padding: 80px;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    input#destinatario {
+        width: 55%;
+    }
+}
+
+@media (min-width: 800px) {
+    .container {
+        padding: 100px;
+        margin: 100px;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    input#destinatario {
+        width: 65%;
+    }
+}
