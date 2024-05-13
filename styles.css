@@ -315,12 +315,12 @@ th {
     .buscador {
         margin: 20px;
         border: 2px solid white;
-        max-width: 500px;
+        max-width: 400px;
         display: flex;
         flex-direction: row;
         margin: auto;
         border-radius: 10px;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
     }
 
     nav {
