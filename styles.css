@@ -14,6 +14,14 @@
     padding: 5px;
 }
 
+.p40 {
+    padding: 40px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
 .p {
     background: linear-gradient(90deg, #b300ff 0%, #02b3ff 100%);
     -webkit-background-clip: text;
@@ -240,6 +248,36 @@ th {
     border: 2px solid white;
 }
 
+.buscador {
+    margin: 20px;
+    border: 2px solid white;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.buscador input {
+    padding: 20px;
+    background: transparent;
+    width: 400px;
+    border: none;
+    text-decoration: none;
+}
+
+.buscador input:active {
+    border: none;
+    text-decoration: none;
+}
+
+.search-button {
+    border: 2px solid white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
 @media (min-width: 900px) {
     .contenedor {
         margin-inline: calc(200px);
@@ -252,6 +290,10 @@ th {
         margin-block: calc(30px);
     }
 
+    .buscador {
+        margin-bottom: 80px;
+    }
+
     nav {
         margin-inline: calc(160px);
     }
@@ -262,10 +304,23 @@ th {
         font-size: 10px;
         gap: 2px;
     }
+
     .contenedor {
         margin-block: calc(20px);
+        padding: 10px;
         font-size: 20px;
-        margin-inline: calc(60px);
+        margin-inline: calc(80px);
+    }
+
+    .buscador {
+        margin: 20px;
+        border: 2px solid white;
+        max-width: 500px;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        border-radius: 10px;
+        margin-bottom: 80px;
     }
 
     nav {
