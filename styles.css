@@ -346,6 +346,10 @@ th {
         margin-block: calc(20px);
         font-size: 25px;
     }
+
+    .next3 {
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 645px) {
