@@ -16,6 +16,7 @@
 
 .p40 {
     padding: 40px;
+    font-size: 20px;
 }
 
 .mb10 {
@@ -269,13 +270,6 @@ th {
 .buscador input:active {
     border: none;
     text-decoration: none;
-}
-
-.search-button {
-    border: 2px solid white;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 10px;
 }
 
 @media (min-width: 900px) {
