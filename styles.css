@@ -293,7 +293,7 @@ th {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     button {
         font-size: 10px;
         gap: 2px;
@@ -308,6 +308,7 @@ th {
 
     .container {
         margin-inline: 20px;
+        margin-block: 20px;
     }
 
     .buscador {
