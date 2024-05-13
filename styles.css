@@ -306,6 +306,10 @@ th {
         margin-inline: calc(60px);
     }
 
+    .container {
+        margin-inline: 60px;
+    }
+
     .buscador {
         margin: 20px;
         border: 2px solid white;
